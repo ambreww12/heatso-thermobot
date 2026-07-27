@@ -8,6 +8,8 @@ import os
 QUESTIONS = {
     "Novice": [
         # === OLD QUESTIONS ===
+        ("A solid is heated at a pressure below its triple-point pressure. What phase change does it go through??",
+         ["Deposition", "Fusion/Melting", "Vapourization", "Sublimation"], 3),
         ("Which law of thermodynamics defines temperature through thermal equilibrium?",
          ["First Law", "Second Law", "Zeroth Law", "Third Law"], 2),
         ("For an ideal gas, internal energy depends only on:",
@@ -98,6 +100,10 @@ QUESTIONS = {
 
     "Intermediate": [
         # === OLD QUESTIONS ===
+        ("A hot object is cooling in a room held at constant temperature T_a = 25 °C. At time t = 0 its temperature is T_0 = 85 °C. After 8 minutes its temperature has fallen to 65 °C. Estimate the object's temperature after 20 minutes.",
+         ["26 °C", "32 °C", "47 °C", "63 °C"], 2),
+        ("A liquid has a vapour pressure of P_1=20 kPa at T_1=300 K. Its molar enthalpy of vapourization is ΔH_vap=40 kJ/mol Find the approximate vapour pressure at T_2=320 K",
+         ["12.5 kPa", "23.5 kPa", "35 kPa", "54.5 kPa"], 2),
         ("An ideal gas expands isothermally. Which quantity is zero?",
          ["Q", "W", "ΔU", "ΔS"], 2),
         ("For a reversible adiabatic process on an ideal gas:",
@@ -270,6 +276,10 @@ QUESTIONS = {
 
     "Very Hard": [
         # === OLD QUESTIONS ===
+        ("A small metal object obeys Newton’s Law of Cooling. In a room held at a constant 25 °C, the object cools from 95 °C to 65 °C in exactly six minutes.
+The object is then immediately transferred into a second room whose temperature is held constant at 5 °C.
+Assuming k doesn't change, determine the temperature of the object 8 mins after it was transferred.",
+         ["33.5 °C", "38.2 °C", "41.0 °C", "44.9 °C"], 0),
         ("An ideal gas is taken through a cycle consisting of isothermal expansion, isochoric cooling, and adiabatic compression back to the original state. Net work is:",
          ["Positive (engine)", "Negative (refrigerator)", "Zero", "Cannot be determined without numbers"], 0),
         ("For a reversible process, ∮ dQ/T equals:",
@@ -319,7 +329,7 @@ QUESTIONS = {
         ("The Clapeyron equation is:",
          ["dP/dT = ΔH_trans / (T ΔV)", "dP/dT = ΔV / (T ΔH)", "ln(P2/P1) = −ΔH/R (1/T2 − 1/T1)", "Both A and C are related forms"], 0),
         ("The integrated Clausius-Clapeyron equation is most often used for:",
-         ["Solid-solid transitions", "Vaporization or sublimation", "Isothermal compression", "Adiabatic expansion"], 1),
+         ["Solid-solid transitions", "Vapourization or sublimation", "Isothermal compression", "Adiabatic expansion"], 1),
         ("Gibbs phase rule for a non-reacting system is:",
          ["F = C + P − 2", "F = C − P + 2", "F = C − P − 2", "F = P − C + 2"], 1),
         ("At the triple point of a single-component system, the number of degrees of freedom F is:",
@@ -399,6 +409,11 @@ QUESTIONS = {
           "Mechanical equivalent of heat → Carnot cycle → Entropy"], 1),
 
         # === NEW FROM BINDER ===
+        ("""A solid metal sphere of radius 2.5 cm, density 7800 kg m^-3, and specific heat capacity c = 450 J kg^-1 K^-1 is suspended in a large evacuated 
+        chamber whose walls are held at a constant temperature T_a = 300 K. The sphere’s surface has emissivity ε = 0.80. In addition to thermal radiation, 
+        a weak convective cooling term is present that follows Newton’s Law of Cooling with heat-transfer coefficient h = 4.5 W m^-2 K^-1. The sphere is initially at 900 K. 
+        Find the approximate time needed for the sphere's temperature to fall under 450 K.""",
+         ["1250 s", "1775 s", "1945 s", "2305 s"], 1),
         ("For an ideal gas undergoing a polytropic process PV^n = constant, the molar heat capacity is:",
          ["Cv + R/(1−n)", "Cv + R/(n−1)", "Cp − R", "Cv only"], 0),
         ("The efficiency of an ideal Otto cycle with compression ratio r is:",
