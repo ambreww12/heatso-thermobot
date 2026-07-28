@@ -4,7 +4,6 @@ from discord.ui import Button, View, Select
 import random
 import os
 # ====================== QUESTIONS ======================
-
 QUESTIONS = {
     "Novice": [
         # === OLD QUESTIONS ===
@@ -30,7 +29,6 @@ QUESTIONS = {
          ["0 °C", "273 K", "0 K", "−273 °C only"], 2),
         ("Cp − Cv for an ideal gas equals:",
          ["0", "R", "γ", "1"], 1),
-
         # === NEW FROM SCIOLY WIKI ===
         ("According to the caloric theory, which of the following assumptions is the only one considered true?",
          ["Heat is a fluid that flows from hot to cold", "Heat is conserved", "Heat is weightless", "Sensible heat causes temperature increase"], 2),
@@ -44,7 +42,6 @@ QUESTIONS = {
          ["Only heat", "Only matter", "Matter, heat, and work", "Nothing"], 2),
         ("A closed system allows heat and work to cross the boundary but does not allow:",
          ["Energy", "Matter", "Entropy", "Temperature change"], 1),
-
         # === NEW HISTORY QUESTIONS ===
         ("The SI unit of energy is named after:",
          ["James Clerk Maxwell", "James Prescott Joule", "Daniel Fahrenheit", "Walther Nernst"], 1),
@@ -64,7 +61,6 @@ QUESTIONS = {
          ["Joule", "Celsius", "Kelvin", "Clausius"], 2),
         ("Which scientist built the first open thermometer?",
          ["Daniel Fahrenheit", "Galileo Galilei", "Anders Celsius", "James Joule"], 1),
-
         # === NEW FROM BINDER ===
         ("The conversion from Celsius to Kelvin is:",
          ["T_K = T_C − 273.15", "T_K = T_C + 273.15", "T_K = (9/5)T_C + 32", "T_K = T_C × 273.15"], 1),
@@ -96,8 +92,28 @@ QUESTIONS = {
          ["PV = nRT", "P/V = nRT", "PV = nR/T", "P + V = nRT"], 0),
         ("On a P-V diagram the area under a process curve represents:",
          ["Heat", "Work", "Change in internal energy", "Entropy"], 1),
+        # === NEW ADDITIONS ===
+        ("Which of the following is NOT a state function?",
+         ["Internal energy", "Enthalpy", "Heat", "Entropy"], 2),
+        ("The process in which both pressure and volume change but temperature stays constant is called:",
+         ["Isobaric", "Isochoric", "Isothermal", "Adiabatic"], 2),
+        ("Latent heat of vaporization of water is approximately:",
+         ["334 kJ/kg", "2260 kJ/kg", "4184 J/kg·K", "100 kJ/kg"], 1),
+        ("In an isothermal process for an ideal gas, ΔU is:",
+         ["Positive", "Negative", "Zero", "Equal to W"], 2),
+        ("The slope of an isobar on a P-V diagram is:",
+         ["Infinite", "Zero", "Negative", "Positive and finite"], 1),
+        ("Which quantity is path-dependent?",
+         ["ΔU", "ΔH", "ΔS", "W"], 3),
+        ("Absolute zero is the temperature at which:",
+         ["All molecular motion stops", "A perfect crystal has zero entropy (Third Law)", "Water freezes", "Gases liquefy"], 1),
+        ("Cp is always greater than Cv for an ideal gas because:",
+         ["The gas does expansion work at constant pressure", "Molecules are closer together", "R is negative", "Entropy decreases"], 0),
+        ("A process with Q = W is:",
+         ["Isobaric", "Isochoric", "Isothermal (ideal gas)", "Adiabatic"], 2),
+        ("The SI unit of entropy is:",
+         ["J/K", "J", "W/K", "K"], 0),
     ],
-
     "Intermediate": [
         # === OLD QUESTIONS ===
         ("A hot object is cooling in a room held at constant temperature T_a = 25 °C. At time t = 0 its temperature is T_0 = 85 °C. After 8 minutes its temperature has fallen to 65 °C. Estimate the object's temperature after 20 minutes.",
@@ -124,7 +140,6 @@ QUESTIONS = {
          ["Energy conservation", "Definition of temperature", "Direction of heat flow", "Maximum efficiency"], 1),
         ("In an isolated system, a spontaneous irreversible process always increases:",
          ["Internal energy", "Enthalpy", "Entropy", "Gibbs free energy"], 2),
-
         # === NEW FROM SCIOLY WIKI ===
         ("Gay-Lussac’s Law states that at constant volume, pressure is directly proportional to:",
          ["Celsius temperature", "Kelvin temperature", "Volume", "Number of moles"], 1),
@@ -138,7 +153,6 @@ QUESTIONS = {
          ["James Clerk Maxwell", "Antoine Lavoisier", "Sadi Carnot", "James Joule"], 1),
         ("According to the kinetic theory, collisions between gas molecules are assumed to be:",
          ["Inelastic", "Perfectly elastic", "Partially elastic", "Negligible"], 1),
-
         # === NEW HISTORY QUESTIONS ===
         ("Which scientist is credited with discovering the mechanical equivalent of heat, helping establish the First Law of Thermodynamics?",
          ["James Prescott Joule", "Sadi Carnot", "Rudolf Clausius", "Lord Kelvin"], 0),
@@ -156,7 +170,6 @@ QUESTIONS = {
          ["Walther Nernst", "Rudolf Clausius", "James Clerk Maxwell", "Lord Kelvin"], 0),
         ("Which scientist founded the Uppsala Astronomical Observatory?",
          ["James Clerk Maxwell", "Anders Celsius", "Lord Kelvin", "Galileo Galilei"], 1),
-
         # === NEW FROM BINDER ===
         ("For an ideal gas, ΔU equals:",
          ["nCpΔT", "nCvΔT", "PΔV", "nR ln(V2/V1)"], 1),
@@ -188,8 +201,28 @@ QUESTIONS = {
          ["ΔU = Q", "Q_net = W_net", "W = 0", "Q = 0"], 1),
         ("Coffee-cup calorimetry is approximately a:",
          ["Constant-volume process", "Constant-pressure process", "Adiabatic process", "Isothermal process"], 1),
+        # === NEW ADDITIONS ===
+        ("An ideal gas is compressed isothermally. The heat released by the gas is:",
+         ["Zero", "Equal to the work done on the gas", "Equal to ΔU", "Greater than the work done on the gas"], 1),
+        ("For a reversible isothermal expansion of an ideal gas, ΔS_system is:",
+         ["Zero", "nR ln(V2/V1)", "Negative", "nCv ln(T2/T1)"], 1),
+        ("Newton’s law of cooling is most accurate when the temperature difference is:",
+         ["Very large", "Moderate", "Near absolute zero", "Independent of the difference"], 1),
+        ("In a P-T phase diagram, the slope of the solid-liquid line for water is:",
+         ["Positive", "Negative", "Zero", "Infinite"], 1),
+        ("The change in enthalpy for an ideal gas depends only on:",
+         ["Pressure", "Volume", "Temperature", "The path"], 2),
+        ("Which process has the largest magnitude of work done by the system for the same volume change (ideal gas)?",
+         ["Isothermal", "Adiabatic", "Isochoric", "Isobaric"], 3),
+        ("A diathermic, rigid, impermeable wall allows:",
+         ["Heat and matter", "Only heat", "Only work", "Nothing"], 1),
+        ("The efficiency of any real heat engine is always:",
+         ["Equal to Carnot efficiency", "Greater than Carnot efficiency", "Less than Carnot efficiency", "Independent of temperatures"], 2),
+        ("When 1 kg of ice at 0 °C melts completely at constant pressure, the entropy change of the system is approximately:",
+         ["0", "1.22 kJ/K", "334 kJ/K", "2260 kJ/K"], 1),
+        ("For an ideal gas, the difference Cp − Cv equals:",
+         ["R only for monatomic gases", "R for any ideal gas", "γR", "Zero"], 1),
     ],
-
     "Hard": [
         # === OLD QUESTIONS ===
         ("An ideal gas expands reversibly and isothermally from V to 2V. The work done by the gas is:",
@@ -212,7 +245,6 @@ QUESTIONS = {
          ["Heat", "Work", "Internal energy", "Both heat and work"], 2),
         ("In a Carnot cycle the two isothermal processes are accompanied by:",
          ["No entropy change of the universe", "Positive entropy change of the universe", "Negative entropy change of the system", "Zero heat transfer"], 0),
-
         # === NEW FROM SCIOLY WIKI ===
         ("In the Carnot cycle, the process in which the gas is thermally isolated and expands while its temperature decreases is:",
          ["Isothermal expansion", "Reversible adiabatic expansion", "Isothermal compression", "Adiabatic compression"], 1),
@@ -226,7 +258,6 @@ QUESTIONS = {
          ["Temperature", "Pressure", "Entropy", "Volume"], 2),
         ("For a reversible process, an adiabatic process is also:",
          ["Isobaric", "Isothermal", "Isentropic", "Isochoric"], 2),
-
         # === NEW HISTORY QUESTIONS ===
         ("The Carnot cycle was first described in which publication?",
          ["On the Mechanical Theory of Heat", "Reflections on the Motive Power of Fire", "Experimental Researches on Electricity", "The Kinetic Theory of Gases"], 1),
@@ -240,7 +271,6 @@ QUESTIONS = {
          ["1824", "1850", "1865", "1905"], 2),
         ("Which scientist's work demonstrated that heat and mechanical work are equivalent?",
          ["Carnot", "Joule", "Kelvin", "Nernst"], 1),
-
         # === NEW FROM BINDER ===
         ("The ideal-gas entropy change at constant volume is given by:",
          ["nCv ln(T2/T1)", "nCp ln(T2/T1)", "nR ln(V2/V1)", "Zero"], 0),
@@ -272,13 +302,31 @@ QUESTIONS = {
          ["ΔS_universe < 0", "ΔS_universe = 0", "ΔS_universe > 0", "ΔU > 0"], 2),
         ("The Third Law states that the entropy of a perfect crystal approaches zero as:",
          ["Pressure approaches zero", "Temperature approaches absolute zero", "Volume approaches zero", "The system becomes isolated"], 1),
+        # === NEW ADDITIONS ===
+        ("An ideal gas expands from V to 3V in a reversible adiabatic process. If γ = 1.4, the final temperature is:",
+         ["T / 3^{0.4}", "T × 3^{0.4}", "T / 3", "T × 3"], 0),
+        ("A Carnot engine has efficiency 1/3. If the sink temperature is 27 °C, the source temperature is:",
+         ["400 K", "450 K", "500 K", "600 K"], 1),
+        ("In free expansion of an ideal gas, which of the following is true?",
+         ["ΔS_system = 0", "ΔS_universe = 0", "ΔS_system > 0 and ΔS_universe > 0", "Q = W ≠ 0"], 2),
+        ("The Maxwell relation from dH = T dS + V dP is:",
+         ["(∂T/∂P)_S = (∂V/∂S)_P", "(∂T/∂P)_S = −(∂V/∂S)_P", "(∂S/∂P)_T = −(∂V/∂T)_P", "(∂S/∂V)_T = (∂P/∂T)_V"], 2),
+        ("For a polytropic process with n = 0, the process is:",
+         ["Isothermal", "Isobaric", "Isochoric", "Adiabatic"], 1),
+        ("The work done in a reversible adiabatic expansion of an ideal gas can also be written as:",
+         ["nR ln(V2/V1)", "nCp(T1 − T2)", "nCv(T1 − T2)", "P1V1 − P2V2"], 2),
+        ("At the critical point of a pure substance, the number of degrees of freedom F is:",
+         ["0", "1", "2", "3"], 0),
+        ("A refrigerator has a COP of 4. If it removes 800 J from the cold reservoir, the work input required is:",
+         ["160 J", "200 J", "3200 J", "1000 J"], 1),
+        ("For an ideal gas, (∂H/∂P)_T equals:",
+         ["0", "V", "−V", "T(∂V/∂T)_P − V"], 0),
+        ("In the Otto cycle, the heat rejection occurs at:",
+         ["Constant pressure", "Constant volume", "Constant temperature", "Constant entropy"], 1),
     ],
-
     "Very Hard": [
         # === OLD QUESTIONS ===
-        ("A small metal object obeys Newton’s Law of Cooling. In a room held at a constant 25 °C, the object cools from 95 °C to 65 °C in exactly six minutes.
-The object is then immediately transferred into a second room whose temperature is held constant at 5 °C.
-Assuming k doesn't change, determine the temperature of the object 8 mins after it was transferred.",
+        ("A small metal object obeys Newton’s Law of Cooling. In a room held at a constant 25 °C, the object cools from 95 °C to 65 °C in exactly six minutes. The object is then immediately transferred into a second room whose temperature is held constant at 5 °C. Assuming k doesn't change, determine the temperature of the object 8 mins after it was transferred.",
          ["33.5 °C", "38.2 °C", "41.0 °C", "44.9 °C"], 0),
         ("An ideal gas is taken through a cycle consisting of isothermal expansion, isochoric cooling, and adiabatic compression back to the original state. Net work is:",
          ["Positive (engine)", "Negative (refrigerator)", "Zero", "Cannot be determined without numbers"], 0),
@@ -300,7 +348,6 @@ Assuming k doesn't change, determine the temperature of the object 8 mins after 
          ["TV^{γ−1}", "T/V", "PV", "P/T"], 0),
         ("The change in entropy of the universe when 1 mole of ideal gas expands freely into vacuum to double its volume is:",
          ["0", "R ln 2", "−R ln 2", "Cv ln 2"], 1),
-
         # === NEW FROM SCIOLY WIKI ===
         ("In the Carnot cycle, the net change in entropy of the universe is:",
          ["Positive", "Negative", "Zero", "Dependent on the temperatures"], 2),
@@ -314,7 +361,6 @@ Assuming k doesn't change, determine the temperature of the object 8 mins after 
          ["Real irreversible engine", "Reversible engine operating between the same temperatures", "Steam engine", "Engine using ideal gas"], 1),
         ("In the caloric theory, “frigoric” referred to:",
          ["A type of work", "The absence or lack of caloric (cold)", "Latent heat", "Sensible heat"], 1),
-
         # === NEW HISTORY QUESTIONS ===
         ("The Third Law of Thermodynamics is also commonly called:",
          ["Joule's Law", "Nernst Heat Theorem", "Kelvin Principle", "Carnot Principle"], 1),
@@ -324,7 +370,6 @@ Assuming k doesn't change, determine the temperature of the object 8 mins after 
          ["The kinetic theory of gases", "The caloric theory of heat", "Statistical mechanics", "Electromagnetism"], 1),
         ("Which pair of scientists are most directly associated with the Second and Third Laws of Thermodynamics, respectively?",
          ["Joule and Kelvin", "Clausius and Nernst", "Carnot and Maxwell", "Fahrenheit and Celsius"], 1),
-
         # === NEW FROM BINDER ===
         ("The Clapeyron equation is:",
          ["dP/dT = ΔH_trans / (T ΔV)", "dP/dT = ΔV / (T ΔH)", "ln(P2/P1) = −ΔH/R (1/T2 − 1/T1)", "Both A and C are related forms"], 0),
@@ -356,8 +401,28 @@ Assuming k doesn't change, determine the temperature of the object 8 mins after 
          ["Isothermal process", "Isobaric process", "Adiabatic process", "Isochoric process"], 2),
         ("For a heat engine exchanging heat only with two reservoirs, ΔS of the reservoirs is:",
          ["−QH/TH + QC/TC ≥ 0", "QH/TH − QC/TC ≥ 0", "Always zero", "Always negative"], 0),
+        # === NEW ADDITIONS ===
+        ("An ideal gas undergoes a process in which T ∝ V². The molar heat capacity for this process is:",
+         ["Cv + R/2", "Cv + 2R", "Cp − R", "Cv + R"], 1),
+        ("One mole of van der Waals gas expands isothermally from V1 to V2. The change in internal energy is:",
+         ["0", "a(1/V1 − 1/V2)", "RT ln((V2−b)/(V1−b))", "−a(1/V1 − 1/V2)"], 1),
+        ("A Carnot engine operating between 600 K and 300 K produces 400 J of work. The heat rejected to the cold reservoir is:",
+         ["200 J", "400 J", "600 J", "800 J"], 1),
+        ("The Joule-Thomson coefficient for an ideal gas is zero because:",
+         ["Enthalpy depends only on temperature", "Internal energy depends only on temperature", "Both of the above", "Neither"], 2),
+        ("In a reversible cycle, ∮ (dQ/T) equals:",
+         ["ΔS_system", "0", "ΔS_universe", "Q_net / T_avg"], 1),
+        ("For a photon gas, the internal energy U is related to volume and temperature by U ∝:",
+         ["VT", "VT²", "VT³", "VT⁴"], 3),
+        ("The critical compressibility factor Zc for a van der Waals gas is exactly:",
+         ["3/8", "1/4", "1/2", "1/8"], 0),
+        ("When two identical bodies at temperatures T1 and T2 are brought into thermal contact in an isolated system, the maximum work that can be extracted is:",
+         ["Cv(T1 − T2)", "Cv(√T1 − √T2)²", "0", "Cv(T1 + T2)/2"], 1),
+        ("The entropy change of the universe for the free expansion of an ideal gas into vacuum is equal to:",
+         ["0", "nR ln(V2/V1)", "nCv ln(T2/T1)", "−nR ln(V2/V1)"], 1),
+        ("In the derivation of the Clausius inequality, the key statement is that for any real cycle:",
+         ["∮ dQ/T ≤ 0", "∮ dQ/T ≥ 0", "∮ dQ/T = 0", "∮ dQ = 0"], 0),
     ],
-
     "Impossible": [
         # === OLD QUESTIONS ===
         ("An ideal gas follows the process TV^{x} = constant. For the molar heat capacity to be 4R, the value of x is: (take γ = 1.4)",
@@ -380,7 +445,6 @@ Assuming k doesn't change, determine the temperature of the object 8 mins after 
          ["0.375", "0.25", "0.5", "0.125"], 0),
         ("In the T-S diagram of a Carnot cycle, the heat absorbed during the isothermal expansion is represented by:",
          ["Area under the upper horizontal line", "Height of the rectangle", "Width of the rectangle", "Diagonal of the rectangle"], 0),
-
         # === NEW FROM SCIOLY WIKI ===
         ("In the detailed Carnot cycle analysis, the relationship Q₂ / Q₁ = T_C / T_H is derived by combining the isothermal work expressions with the adiabatic condition that:",
          ["V₂ / V₁ = V₃ / V₄", "V₂ / V₄ = V₃ / V₁", "T_H V₂^{γ−1} = T_C V₃^{γ−1}", "Both the volume ratios and the adiabatic relation"], 3),
@@ -394,7 +458,6 @@ Assuming k doesn't change, determine the temperature of the object 8 mins after 
          ["Q₁/T_H = Q₂/T_C", "The processes are adiabatic", "No heat is transferred", "The cycle is irreversible"], 0),
         ("Statistical thermodynamics (as contrasted with classical) explains macroscopic laws by considering:",
          ["Only measurable laboratory properties", "Microscopic molecular motions and statistical distributions", "Chemical reaction pathways only", "Non-equilibrium systems exclusively"], 1),
-
         # === NEW HISTORY QUESTIONS ===
         ("Which of the following scientists died before the concept of entropy was introduced?",
          ["Rudolf Clausius", "Sadi Carnot", "Lord Kelvin", "Walther Nernst"], 1),
@@ -407,11 +470,10 @@ Assuming k doesn't change, determine the temperature of the object 8 mins after 
           "Carnot cycle → Joule's mechanical equivalent of heat → Entropy",
           "Entropy → Carnot cycle → Kelvin scale",
           "Mechanical equivalent of heat → Carnot cycle → Entropy"], 1),
-
         # === NEW FROM BINDER ===
-        ("""A solid metal sphere of radius 2.5 cm, density 7800 kg m^-3, and specific heat capacity c = 450 J kg^-1 K^-1 is suspended in a large evacuated 
-        chamber whose walls are held at a constant temperature T_a = 300 K. The sphere’s surface has emissivity ε = 0.80. In addition to thermal radiation, 
-        a weak convective cooling term is present that follows Newton’s Law of Cooling with heat-transfer coefficient h = 4.5 W m^-2 K^-1. The sphere is initially at 900 K. 
+        ("""A solid metal sphere of radius 2.5 cm, density 7800 kg m^-3, and specific heat capacity c = 450 J kg^-1 K^-1 is suspended in a large evacuated
+        chamber whose walls are held at a constant temperature T_a = 300 K. The sphere’s surface has emissivity ε = 0.80. In addition to thermal radiation,
+        a weak convective cooling term is present that follows Newton’s Law of Cooling with heat-transfer coefficient h = 4.5 W m^-2 K^-1. The sphere is initially at 900 K.
         Find the approximate time needed for the sphere's temperature to fall under 450 K.""",
          ["1250 s", "1775 s", "1945 s", "2305 s"], 1),
         ("For an ideal gas undergoing a polytropic process PV^n = constant, the molar heat capacity is:",
@@ -444,9 +506,29 @@ Assuming k doesn't change, determine the temperature of the object 8 mins after 
          ["Isothermal", "Reversible", "Isobaric", "Irreversible"], 1),
         ("For a cyclic device operating between two reservoirs, the equality ΔS_reservoirs = 0 holds only for:",
          ["Any real engine", "A reversible engine", "A refrigerator", "A heat pump with COP > 1"], 1),
+        # === NEW ADDITIONS ===
+        ("An ideal gas follows TV^x = constant. If the molar heat capacity for the process is 3R and γ = 5/3, the value of x is:",
+         ["0.5", "1", "1.5", "2"], 0),
+        ("A heat engine operates with two Carnot engines in series. The first operates between T and T/2, the second between T/2 and T/4. The overall efficiency is:",
+         ["1/2", "3/4", "7/8", "15/16"], 1),
+        ("For a van der Waals gas, the inversion temperature (where μ_JT = 0) is given by:",
+         ["2a/Rb", "a/Rb", "a/(2Rb)", "2a/(Rb)"], 0),
+        ("The natural variables of the Gibbs free energy G are:",
+         ["S, V", "T, V", "T, P", "S, P"], 2),
+        ("In a reversible polytropic process with n = γ, the heat transfer Q is:",
+         ["nCv(T2 − T1)", "nCp(T2 − T1)", "0", "nR(T2 − T1)/(γ − 1)"], 2),
+        ("The efficiency of a Carnot engine working between temperatures T and T − ΔT (ΔT ≪ T) is approximately:",
+         ["ΔT/T", "2ΔT/T", "ΔT/(2T)", "(ΔT/T)²"], 0),
+        ("For blackbody radiation, the entropy S is related to internal energy U and temperature by:",
+         ["S = U/T", "S = (4/3)U/T", "S = (3/4)U/T", "S = U/(3T)"], 1),
+        ("A system absorbs heat Q from a reservoir at T_h and rejects heat to a reservoir at T_c while producing work W. The entropy production of the universe is:",
+         ["Q/T_h − (Q − W)/T_c", "(Q − W)/T_c − Q/T_h", "W/T_h", "0"], 1),
+        ("The Helmholtz free energy F satisfies the relation (∂F/∂T)_V =:",
+         ["−S", "S", "−P", "P"], 0),
+        ("In the limit of a reversible isothermal free expansion of an ideal gas, the entropy change of the system approaches:",
+         ["0", "nR ln(V2/V1)", "Infinity", "−nR ln(V2/V1)"], 1),
     ]
 }
-
 # ====================== UI CLASSES ======================
 
 class AnswerButton(Button):
