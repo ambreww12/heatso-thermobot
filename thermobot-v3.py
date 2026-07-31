@@ -3,6 +3,7 @@ from discord import app_commands
 from discord.ui import Button, View, Select
 import random
 import os
+
 # ====================== QUESTIONS ======================
 QUESTIONS = {
     "Novice": [
@@ -529,8 +530,8 @@ QUESTIONS = {
          ["0", "nR ln(V2/V1)", "Infinity", "−nR ln(V2/V1)"], 1),
     ]
 }
-# ====================== UI CLASSES ======================
 
+# ====================== UI CLASSES ======================
 class AnswerButton(Button):
     def __init__(self, label: str, index: int, correct_index: int, options: list):
         super().__init__(label=label, style=discord.ButtonStyle.secondary)
@@ -543,11 +544,9 @@ class AnswerButton(Button):
         if view.answered:
             await interaction.response.send_message("This question has already been answered.", ephemeral=True)
             return
-
         view.answered = True
         selected = chr(65 + self.index)
         correct = chr(65 + self.correct_index)
-
         # Disable all buttons
         for item in view.children:
             item.disabled = True
@@ -556,21 +555,17 @@ class AnswerButton(Button):
                     item.style = discord.ButtonStyle.success
                 elif item.index == self.index:
                     item.style = discord.ButtonStyle.danger
-
         if self.index == self.correct_index:
             msg = f"✅ **Correct!**\nYou selected **{selected}) {self.options[self.index]}**"
         else:
             msg = (f"❌ **Wrong.**\n"
                    f"You selected **{selected}) {self.options[self.index]}**\n"
                    f"Correct answer: **{correct}) {self.options[self.correct_index]}**")
-
         await interaction.response.send_message(msg, ephemeral=True)
-
         # Update public message
         embed = interaction.message.embeds[0]
         embed.set_footer(text=f"Answered by {interaction.user.display_name}")
         await interaction.message.edit(view=view)
-
 
 class QuestionView(View):
     def __init__(self, correct_index: int, options: list, owner_id: int):
@@ -579,7 +574,6 @@ class QuestionView(View):
         self.options = options
         self.owner_id = owner_id
         self.answered = False
-
         for i, letter in enumerate(["A", "B", "C", "D"]):
             self.add_item(AnswerButton(letter, i, correct_index, options))
 
@@ -590,7 +584,6 @@ class QuestionView(View):
             )
             return False
         return True
-
 
 class DifficultySelect(Select):
     def __init__(self, owner_id: int):
@@ -610,10 +603,8 @@ class DifficultySelect(Select):
                 "Only the person who ran the command can choose the difficulty.", ephemeral=True
             )
             return
-
         difficulty = self.values[0]
         q_text, options, correct = random.choice(QUESTIONS[difficulty])
-
         embed = discord.Embed(
             title=f"🔥 HeatSO Thermodynamics — {difficulty}",
             description=q_text,
@@ -622,10 +613,8 @@ class DifficultySelect(Select):
         option_text = "\n".join(f"**{chr(65+i)})** {opt}" for i, opt in enumerate(options))
         embed.add_field(name="Options", value=option_text, inline=False)
         embed.set_footer(text="(Only the user who requested the question can answer this question)")
-
         view = QuestionView(correct, options, interaction.user.id)
         await interaction.response.edit_message(embed=embed, view=view)
-
 
 class DifficultyView(View):
     def __init__(self, owner_id: int):
@@ -641,9 +630,7 @@ class DifficultyView(View):
             return False
         return True
 
-
 # ====================== BOT ======================
-
 class ThermoBot(discord.Client):
     def __init__(self):
         intents = discord.Intents.default()
@@ -657,9 +644,7 @@ class ThermoBot(discord.Client):
         print(f"Logged in as {self.user} (ID: {self.user.id})")
         print("------")
 
-
 client = ThermoBot()
-
 
 @client.tree.command(name="thermo", description="Get a thermodynamics question")
 async def thermo(interaction: discord.Interaction):
@@ -670,7 +655,6 @@ async def thermo(interaction: discord.Interaction):
     )
     await interaction.response.send_message(embed=embed, view=DifficultyView(interaction.user.id))
 
-
 @client.tree.command(name="random", description="Alias for /thermo")
 async def random_cmd(interaction: discord.Interaction):
     embed = discord.Embed(
@@ -680,5 +664,9 @@ async def random_cmd(interaction: discord.Interaction):
     )
     await interaction.response.send_message(embed=embed, view=DifficultyView(interaction.user.id))
 
+@client.tree.command(name="coinflip", description="Flip a coin")
+async def coinflip(interaction: discord.Interaction):
+    result = random.choice(["Heads", "Tails"])
+    await interaction.response.send_message(f"🪙 The coin landed on **{result}**!")
 
 client.run(os.getenv("DISCORD_TOKEN"))
