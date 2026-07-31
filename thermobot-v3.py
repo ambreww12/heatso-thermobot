@@ -4,7 +4,7 @@ from discord.ui import Button, View, Select
 import random
 import os
 
-# ====================== QUESTIONS ======================
+# ====================== THERMODYNAMICS QUESTIONS ======================
 QUESTIONS = {
     "Novice": [
         # === OLD QUESTIONS ===
@@ -531,6 +531,220 @@ QUESTIONS = {
     ]
 }
 
+# ====================== ANATOMY & PHYSIOLOGY (SciOly-focused) ======================
+QUESTIONS_ANATPHY = {
+    "Novice": [
+        ("Which type of tissue covers body surfaces and lines internal cavities?",
+         ["Connective tissue", "Muscle tissue", "Nervous tissue", "Epithelial tissue"], 3),
+        ("The basic functional unit of the nervous system is the:",
+         ["Nephron", "Neuron", "Osteocyte", "Myofibril"], 1),
+        ("Which organelle is known as the powerhouse of the cell?",
+         ["Ribosome", "Golgi apparatus", "Mitochondrion", "Lysosome"], 2),
+        ("Bones are connected to other bones by:",
+         ["Tendons", "Ligaments", "Cartilage only", "Fascia"], 1),
+        ("The primary function of red blood cells is to:",
+         ["Fight infection", "Clot blood", "Transport oxygen", "Produce antibodies"], 2),
+        ("Which system is responsible for the exchange of oxygen and carbon dioxide?",
+         ["Circulatory", "Respiratory", "Digestive", "Endocrine"], 1),
+        ("The pacemaker of the heart is the:",
+         ["AV node", "SA node", "Bundle of His", "Purkinje fibers"], 1),
+        ("Which hormone lowers blood glucose levels?",
+         ["Glucagon", "Insulin", "Cortisol", "Epinephrine"], 1),
+        ("The functional unit of the kidney is the:",
+         ["Neuron", "Alveolus", "Nephron", "Hepatocyte"], 2),
+        ("Which type of muscle is voluntary?",
+         ["Cardiac", "Smooth", "Skeletal", "All of the above"], 2),
+        ("The largest organ of the human body is the:",
+         ["Liver", "Brain", "Skin", "Small intestine"], 2),
+        ("Which blood vessels carry blood away from the heart?",
+         ["Veins", "Arteries", "Capillaries", "Venules"], 1),
+        ("The process of bone formation is called:",
+         ["Ossification", "Hematopoiesis", "Calcification only", "Resorption"], 0),
+        ("Which part of the brain controls balance and coordination?",
+         ["Cerebrum", "Cerebellum", "Medulla oblongata", "Hypothalamus"], 1),
+        ("Bile is produced by the:",
+         ["Gallbladder", "Pancreas", "Liver", "Stomach"], 2),
+        ("The voice box is also known as the:",
+         ["Pharynx", "Larynx", "Trachea", "Epiglottis"], 1),
+        ("Which vitamin is essential for blood clotting?",
+         ["Vitamin C", "Vitamin D", "Vitamin K", "Vitamin B12"], 2),
+        ("White blood cells are also called:",
+         ["Erythrocytes", "Leukocytes", "Thrombocytes", "Platelets"], 1),
+        ("The smallest blood vessels are:",
+         ["Arteries", "Veins", "Capillaries", "Arterioles"], 2),
+        ("Homeostasis means the body maintains:",
+         ["Constant growth", "Stable internal conditions", "Only external responses", "Maximum energy production"], 1),
+    ],
+    "Intermediate": [
+        ("Which structure prevents food from entering the larynx during swallowing?",
+         ["Uvula", "Epiglottis", "Soft palate", "Glottis"], 1),
+        ("The hormone TSH is produced by the:",
+         ["Thyroid gland", "Anterior pituitary", "Posterior pituitary", "Hypothalamus only"], 1),
+        ("In the sliding filament theory, calcium binds to which protein?",
+         ["Myosin", "Actin", "Troponin", "Tropomyosin"], 2),
+        ("Which cranial nerve is responsible for the sense of smell?",
+         ["Optic (II)", "Olfactory (I)", "Trigeminal (V)", "Facial (VII)"], 1),
+        ("The renal corpuscle is made of the glomerulus and:",
+         ["Loop of Henle", "Bowman’s capsule", "Collecting duct", "Proximal tubule only"], 1),
+        ("Oxygenated blood returns to the heart from the lungs via the:",
+         ["Pulmonary arteries", "Pulmonary veins", "Aorta", "Superior vena cava"], 1),
+        ("Surfactant in the lungs functions to:",
+         ["Increase surface tension", "Decrease surface tension in alveoli", "Produce mucus", "Kill pathogens"], 1),
+        ("Most nutrient absorption occurs in the:",
+         ["Stomach", "Duodenum", "Jejunum", "Large intestine"], 2),
+        ("The shoulder joint is an example of a:",
+         ["Hinge joint", "Pivot joint", "Ball-and-socket joint", "Saddle joint"], 2),
+        ("Aldosterone causes the kidneys to:",
+         ["Excrete more sodium", "Reabsorb more sodium", "Reabsorb more potassium", "Decrease blood volume"], 1),
+        ("Myelin in the peripheral nervous system is produced by:",
+         ["Oligodendrocytes", "Schwann cells", "Astrocytes", "Microglia"], 1),
+        ("The two cerebral hemispheres are connected by the:",
+         ["Corpus callosum", "Thalamus", "Pons", "Medulla"], 0),
+        ("Pepsin is an enzyme that digests:",
+         ["Carbohydrates", "Lipids", "Proteins", "Nucleic acids"], 2),
+        ("Which leukocyte is most involved in allergic reactions?",
+         ["Neutrophil", "Eosinophil", "Monocyte", "Lymphocyte"], 1),
+        ("Thyroid hormones require which element for synthesis?",
+         ["Iron", "Iodine", "Calcium", "Zinc"], 1),
+        ("During depolarization of a neuron, the main ion entering the cell is:",
+         ["Potassium", "Sodium", "Calcium", "Chloride"], 1),
+        ("Functional residual capacity equals:",
+         ["Tidal volume + inspiratory reserve", "Expiratory reserve volume + residual volume", "Vital capacity only", "Inspiratory capacity"], 1),
+        ("Oxytocin is released from the:",
+         ["Anterior pituitary", "Posterior pituitary", "Thyroid", "Adrenal cortex"], 1),
+        ("The spleen’s primary functions include:",
+         ["Producing digestive enzymes", "Filtering blood and immune surveillance", "Storing bile", "Producing urine"], 1),
+        ("Elastic cartilage is found in the:",
+         ["Nose", "Intervertebral discs", "External ear", "Tracheal rings"], 2),
+    ],
+    "Hard": [
+        ("The sodium-potassium pump moves:",
+         ["3 Na⁺ in and 2 K⁺ out", "3 Na⁺ out and 2 K⁺ in", "2 Na⁺ out and 3 K⁺ in", "Equal numbers of both ions"], 1),
+        ("The juxtaglomerular apparatus helps regulate:",
+         ["Blood glucose", "Blood pressure through renin release", "Body temperature", "Blood pH directly"], 1),
+        ("In a sarcomere, the H zone contains:",
+         ["Only thin filaments", "Only thick filaments", "Both overlapping filaments", "No filaments"], 1),
+        ("Which cranial nerve carries parasympathetic innervation to the heart?",
+         ["Glossopharyngeal (IX)", "Vagus (X)", "Facial (VII)", "Trigeminal (V)"], 1),
+        ("The Bohr effect refers to:",
+         ["Increased O₂ affinity at higher pH", "Decreased O₂ affinity of hemoglobin when pH drops or CO₂ rises", "Increased CO₂ binding only", "A left shift of the dissociation curve"], 1),
+        ("Keratohyalin granules are found in which epidermal layer?",
+         ["Stratum basale", "Stratum spinosum", "Stratum granulosum", "Stratum corneum"], 2),
+        ("Macula densa cells sense changes in:",
+         ["Blood pressure in the afferent arteriole", "NaCl concentration in the distal tubule", "Oxygen levels", "Hormone levels"], 1),
+        ("Type I muscle fibers are characterized as:",
+         ["Fast-twitch glycolytic", "Slow-twitch oxidative and fatigue-resistant", "Fast oxidative-glycolytic", "Primarily anaerobic"], 1),
+        ("The portal triad of the liver contains branches of the:",
+         ["Hepatic artery, hepatic vein, and bile duct", "Hepatic artery, portal vein, and bile duct", "Portal vein, hepatic vein, and lymph vessel", "Hepatic artery, portal vein, and hepatic vein"], 1),
+        ("During the absolute refractory period:",
+         ["A strong stimulus can still trigger an action potential", "No stimulus can trigger another action potential", "Only potassium channels are open", "The membrane is hyperpolarized"], 1),
+        ("Hepcidin regulates iron by:",
+         ["Increasing iron absorption when levels are high", "Decreasing iron absorption and release when iron is high", "Only affecting hemoglobin synthesis", "Stimulating erythropoietin"], 1),
+        ("The countercurrent multiplier is located in the:",
+         ["Proximal convoluted tubule", "Loop of Henle", "Distal convoluted tubule", "Collecting duct"], 1),
+        ("The sarcoplasmic reticulum’s main role in skeletal muscle is to:",
+         ["Store and release calcium ions", "Generate ATP", "Synthesize contractile proteins", "Conduct action potentials"], 0),
+        ("In fetal circulation, the foramen ovale allows blood to flow from:",
+         ["Right atrium to left atrium", "Right ventricle to left ventricle", "Pulmonary artery to aorta", "Superior to inferior vena cava"], 0),
+        ("Which is NOT a major function of the hypothalamus?",
+         ["Temperature regulation", "Control of the autonomic nervous system", "Production of ADH and oxytocin", "Direct voluntary motor control"], 3),
+        ("The common pathway of the clotting cascade begins with activation of:",
+         ["Factor XII", "Factor VII", "Factor X", "Factor VIII"], 2),
+        ("The major intracellular anion is:",
+         ["Sodium", "Chloride", "Potassium", "Phosphate / organic phosphates"], 3),
+        ("Linear acceleration and head position are detected by the:",
+         ["Cochlea", "Semicircular canals", "Utricle and saccule", "Tympanic membrane"], 2),
+        ("Starling’s law of the heart states that:",
+         ["Heart rate is controlled only by the SA node", "Stroke volume increases with increased end-diastolic volume (within physiological limits)", "Cardiac output is independent of venous return", "Blood pressure depends only on resistance"], 1),
+        ("Testosterone is produced primarily by which cells in the testes?",
+         ["Sertoli cells", "Leydig (interstitial) cells", "Spermatogonia", "Principal cells"], 1),
+    ],
+    "Very Hard": [
+        ("The approximate Nernst potential for potassium in a typical neuron is:",
+         ["+60 mV", "0 mV", "−90 mV", "−70 mV"], 2),
+        ("During exercise the oxygen-hemoglobin dissociation curve shifts right mainly because of:",
+         ["Decreased temperature and 2,3-BPG", "Increased CO₂, H⁺, temperature, and 2,3-BPG", "Increased pH only", "Decreased PCO₂"], 1),
+        ("Most bicarbonate reabsorption in the kidney occurs in the:",
+         ["Proximal convoluted tubule", "Thick ascending limb", "Distal convoluted tubule", "Collecting duct"], 0),
+        ("The length-tension relationship in skeletal muscle is largely due to:",
+         ["Optimal overlap of actin and myosin filaments", "Availability of ATP only", "Frequency of stimulation only", "Elasticity of titin alone"], 0),
+        ("The blood-brain barrier is formed primarily by:",
+         ["Tight junctions between capillary endothelial cells", "Astrocytes alone", "The meninges", "Absence of capillaries in the brain"], 0),
+        ("The second heart sound (S2) is caused by:",
+         ["Closure of the atrioventricular valves", "Closure of the semilunar valves", "Opening of the AV valves", "Rapid ventricular filling"], 1),
+        ("The Henderson-Hasselbalch equation for the bicarbonate system is:",
+         ["pH = pKa + log([H₂CO₃]/[HCO₃⁻])", "pH = pKa + log([HCO₃⁻]/[H₂CO₃])", "pH = pKa − log([HCO₃⁻]/[CO₂])", "pH = 6.1 + log([CO₂]/[HCO₃⁻])"], 1),
+        ("Which change would increase glomerular filtration rate?",
+         ["Constriction of the afferent arteriole", "Dilation of the afferent arteriole", "Increased plasma oncotic pressure", "Severe volume depletion"], 1),
+        ("Calcium-induced calcium release in cardiac muscle involves:",
+         ["L-type Ca²⁺ channels triggering ryanodine receptors", "Only T-type calcium channels", "Voltage-gated sodium channels releasing Ca²⁺", "No involvement of the sarcoplasmic reticulum"], 0),
+        ("Water reabsorption in the proximal tubule is driven mainly by:",
+         ["Active transport of water", "The osmotic gradient created by solute reabsorption", "Hydrostatic pressure", "ADH"], 1),
+        ("A key feature of smooth muscle is:",
+         ["It always requires an action potential to contract", "It can maintain contraction with low ATP use (latch state)", "It uses troponin as its main regulatory protein", "It has an extensive T-tubule system"], 1),
+        ("The Hering-Breuer reflex is mediated by:",
+         ["Carotid body chemoreceptors", "Pulmonary stretch receptors via the vagus nerve", "Central chemoreceptors", "Joint proprioceptors"], 1),
+        ("The enzyme responsible for organification and coupling of thyroid hormones is:",
+         ["Thyroid peroxidase", "Deiodinase", "Thyroglobulin synthase", "TSH receptor"], 0),
+        ("Atrial natriuretic peptide (ANP) primarily:",
+         ["Increases renin release", "Causes sodium retention", "Promotes natriuresis and lowers blood volume/pressure", "Stimulates ADH release"], 2),
+        ("The plateau phase of the cardiac action potential is mainly due to:",
+         ["Rapid opening of delayed rectifier K⁺ channels", "Inward Ca²⁺ current balancing outward K⁺ current", "Prolonged opening of Na⁺ channels", "Inactivity of the Na⁺/K⁺ pump"], 1),
+        ("Cerebrospinal fluid is produced by the:",
+         ["Arachnoid villi", "Choroid plexus", "Ependymal cells of the central canal only", "Pia mater"], 1),
+        ("Factor VIII acts as a cofactor for:",
+         ["Activation of Factor X by Factor IXa", "Conversion of prothrombin to thrombin", "Activation of Factor VII", "Cross-linking of fibrin"], 0),
+        ("At rest the membrane is more permeable to:",
+         ["Sodium than potassium", "Potassium than sodium", "Calcium than either", "Chloride only"], 1),
+        ("In severe emphysema one would expect:",
+         ["Increased elastic recoil", "Decreased residual volume", "Air trapping and increased residual volume", "Increased FEV1/FVC ratio"], 2),
+        ("The zona glomerulosa of the adrenal cortex mainly secretes:",
+         ["Cortisol", "Aldosterone", "Androgens", "Epinephrine"], 1),
+    ],
+    "Impossible": [
+        ("Using the Nernst equation at 37 °C, with [K⁺]in = 140 mM and [K⁺]out = 5 mM, the potassium equilibrium potential is closest to:",
+         ["−90 mV", "−70 mV", "−60 mV", "+60 mV"], 0),
+        ("In chronic metabolic acidosis the expected respiratory compensation is:",
+         ["Hypoventilation", "Hyperventilation that lowers PCO₂", "Increased renal bicarbonate excretion", "Decreased ammonia production"], 1),
+        ("The Goldman-Hodgkin-Katz equation takes into account:",
+         ["Only potassium permeability", "Relative permeabilities of Na⁺, K⁺, and Cl⁻", "Only the contribution of the Na⁺/K⁺ pump", "The peak of the action potential"], 1),
+        ("In healthy individuals during maximal exercise, the main limit to oxygen delivery is usually:",
+         ["Pulmonary diffusion", "Cardiac output", "Mitochondrial capacity", "Hemoglobin concentration"], 1),
+        ("Glucose reabsorption in the proximal tubule occurs primarily via:",
+         ["SGLT cotransporters driven by the sodium gradient", "GLUT transporters only", "Paracellular diffusion", "Primary active transport independent of sodium"], 0),
+        ("The Frank-Starling mechanism is best explained by:",
+         ["Increased sympathetic drive", "Optimal sarcomere length improving actin-myosin overlap and calcium sensitivity", "It only works in heart failure", "Decreased stroke volume with increased preload"], 1),
+        ("The chloride shift in red blood cells involves:",
+         ["Cl⁻ entering in exchange for HCO₃⁻ leaving", "Cl⁻ leaving in exchange for HCO₃⁻ entering", "Active pumping of chloride out", "No role for band 3 protein"], 0),
+        ("According to the size principle of motor unit recruitment:",
+         ["Large motor units are recruited first", "Small, fatigue-resistant motor units are recruited first", "Recruitment is random", "Fast-twitch fibers are always first"], 1),
+        ("A lesion of the left optic tract produces:",
+         ["Left homonymous hemianopia", "Right homonymous hemianopia", "Bitemporal hemianopia", "Blindness in the left eye only"], 1),
+        ("The plateau of the ventricular action potential is caused mainly by:",
+         ["Delayed rectifier potassium channels opening quickly", "Inward calcium current through L-type channels balancing potassium efflux", "Sodium channels staying open", "Temporary stop of the Na⁺/K⁺ pump"], 1),
+        ("Correct sequence in skeletal muscle excitation-contraction coupling:",
+         ["AP → T-tubule → DHPR conformational change → RyR opens → Ca²⁺ release", "AP → direct Ca²⁺ entry from ECF → troponin binding", "AP → IP₃ production → SR release", "AP → Na⁺ entry → direct myosin activation"], 0),
+        ("The key active transport step of the countercurrent multiplier is:",
+         ["Na⁺-K⁺-2Cl⁻ cotransport in the thick ascending limb", "Water reabsorption in the descending limb", "Urea recycling alone", "Active Na⁺ transport in the collecting duct"], 0),
+        ("Blocking the Na⁺/Ca²⁺ exchanger (NCX) in cardiac myocytes would tend to:",
+         ["Decrease intracellular calcium and weaken contraction", "Increase intracellular calcium and strengthen contraction", "Have no effect on contractility", "Affect only pacemaker cells"], 1),
+        ("The respiratory quotient for pure carbohydrate oxidation is:",
+         ["0.7", "0.8", "1.0", "1.2"], 2),
+        ("The final hydroxylation step in the formation of active vitamin D (calcitriol) occurs mainly in the:",
+         ["Liver", "Kidney (proximal tubule)", "Skin", "Intestine"], 1),
+        ("The pre-Bötzinger complex is best described as:",
+         ["The primary rhythm generator for respiration", "A peripheral chemoreceptor", "Located in the cerebral cortex", "Active only during exercise"], 0),
+        ("Hypoproteinemia would be expected to:",
+         ["Decrease GFR", "Increase GFR because of lower glomerular capillary oncotic pressure", "Have no effect on GFR", "Increase afferent arteriolar resistance"], 1),
+        ("The tenase complex consists of:",
+         ["Factors VIIIa and IXa (with Ca²⁺ and phospholipid)", "Factors Va and Xa", "Tissue factor and Factor VIIa", "Factors XIa and XIIa"], 0),
+        ("The major intracellular buffers are:",
+         ["Bicarbonate", "Phosphate and proteins (including hemoglobin)", "Ammonia", "Sulfate"], 1),
+        ("A left shift of the oxygen-hemoglobin dissociation curve is caused by:",
+         ["Increased 2,3-BPG", "Decreased pH", "Increased temperature", "Fetal hemoglobin or decreased 2,3-BPG"], 3),
+    ]
+}
+
 # ====================== UI CLASSES ======================
 class AnswerButton(Button):
     def __init__(self, label: str, index: int, correct_index: int, options: list):
@@ -547,7 +761,7 @@ class AnswerButton(Button):
         view.answered = True
         selected = chr(65 + self.index)
         correct = chr(65 + self.correct_index)
-        # Disable all buttons
+
         for item in view.children:
             item.disabled = True
             if isinstance(item, AnswerButton):
@@ -555,6 +769,7 @@ class AnswerButton(Button):
                     item.style = discord.ButtonStyle.success
                 elif item.index == self.index:
                     item.style = discord.ButtonStyle.danger
+
         if self.index == self.correct_index:
             msg = f"✅ **Correct!**\nYou selected **{selected}) {self.options[self.index]}**"
         else:
@@ -562,10 +777,11 @@ class AnswerButton(Button):
                    f"You selected **{selected}) {self.options[self.index]}**\n"
                    f"Correct answer: **{correct}) {self.options[self.correct_index]}**")
         await interaction.response.send_message(msg, ephemeral=True)
-        # Update public message
+
         embed = interaction.message.embeds[0]
         embed.set_footer(text=f"Answered by {interaction.user.display_name}")
         await interaction.message.edit(view=view)
+
 
 class QuestionView(View):
     def __init__(self, correct_index: int, options: list, owner_id: int):
@@ -585,9 +801,13 @@ class QuestionView(View):
             return False
         return True
 
+
 class DifficultySelect(Select):
-    def __init__(self, owner_id: int):
+    def __init__(self, owner_id: int, questions_dict: dict, color: int, title_prefix: str):
         self.owner_id = owner_id
+        self.questions_dict = questions_dict
+        self.color = color
+        self.title_prefix = title_prefix
         options = [
             discord.SelectOption(label="Novice", description="Fundamentals", emoji="🟢"),
             discord.SelectOption(label="Intermediate", description="Solid intermediate", emoji="🟡"),
@@ -603,24 +823,28 @@ class DifficultySelect(Select):
                 "Only the person who ran the command can choose the difficulty.", ephemeral=True
             )
             return
+
         difficulty = self.values[0]
-        q_text, options, correct = random.choice(QUESTIONS[difficulty])
+        q_text, options, correct = random.choice(self.questions_dict[difficulty])
+
         embed = discord.Embed(
-            title=f"🔥 HeatSO Thermodynamics — {difficulty}",
+            title=f"{self.title_prefix} — {difficulty}",
             description=q_text,
-            color=0xE85D04
+            color=self.color
         )
         option_text = "\n".join(f"**{chr(65+i)})** {opt}" for i, opt in enumerate(options))
         embed.add_field(name="Options", value=option_text, inline=False)
         embed.set_footer(text="(Only the user who requested the question can answer this question)")
+
         view = QuestionView(correct, options, interaction.user.id)
         await interaction.response.edit_message(embed=embed, view=view)
 
+
 class DifficultyView(View):
-    def __init__(self, owner_id: int):
+    def __init__(self, owner_id: int, questions_dict: dict, color: int, title_prefix: str):
         super().__init__(timeout=60)
         self.owner_id = owner_id
-        self.add_item(DifficultySelect(owner_id))
+        self.add_item(DifficultySelect(owner_id, questions_dict, color, title_prefix))
 
     async def interaction_check(self, interaction: discord.Interaction) -> bool:
         if interaction.user.id != self.owner_id:
@@ -629,6 +853,7 @@ class DifficultyView(View):
             )
             return False
         return True
+
 
 # ====================== BOT ======================
 class ThermoBot(discord.Client):
@@ -644,7 +869,9 @@ class ThermoBot(discord.Client):
         print(f"Logged in as {self.user} (ID: {self.user.id})")
         print("------")
 
+
 client = ThermoBot()
+
 
 @client.tree.command(name="thermo", description="Get a thermodynamics question")
 async def thermo(interaction: discord.Interaction):
@@ -653,7 +880,16 @@ async def thermo(interaction: discord.Interaction):
         description="Select a difficulty:",
         color=0xE85D04
     )
-    await interaction.response.send_message(embed=embed, view=DifficultyView(interaction.user.id))
+    await interaction.response.send_message(
+        embed=embed,
+        view=DifficultyView(
+            interaction.user.id,
+            questions_dict=QUESTIONS,
+            color=0xE85D04,
+            title_prefix="🔥 HeatSO Thermodynamics"
+        )
+    )
+
 
 @client.tree.command(name="random", description="Alias for /thermo")
 async def random_cmd(interaction: discord.Interaction):
@@ -662,11 +898,39 @@ async def random_cmd(interaction: discord.Interaction):
         description="Select a difficulty:",
         color=0xE85D04
     )
-    await interaction.response.send_message(embed=embed, view=DifficultyView(interaction.user.id))
+    await interaction.response.send_message(
+        embed=embed,
+        view=DifficultyView(
+            interaction.user.id,
+            questions_dict=QUESTIONS,
+            color=0xE85D04,
+            title_prefix="🔥 HeatSO Thermodynamics"
+        )
+    )
+
+
+@client.tree.command(name="anatphy", description="Get an Anatomy & Physiology question (SciOly style)")
+async def anatphy(interaction: discord.Interaction):
+    embed = discord.Embed(
+        title="🧬 Anatomy & Physiology",
+        description="Select a difficulty:",
+        color=0x0D9488
+    )
+    await interaction.response.send_message(
+        embed=embed,
+        view=DifficultyView(
+            interaction.user.id,
+            questions_dict=QUESTIONS_ANATPHY,
+            color=0x0D9488,
+            title_prefix="🧬 Anatomy & Physiology"
+        )
+    )
+
 
 @client.tree.command(name="coinflip", description="Flip a coin")
 async def coinflip(interaction: discord.Interaction):
     result = random.choice(["Heads", "Tails"])
     await interaction.response.send_message(f"🪙 The coin landed on **{result}**!")
+
 
 client.run(os.getenv("DISCORD_TOKEN"))
